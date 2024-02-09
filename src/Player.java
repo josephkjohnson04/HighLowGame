@@ -12,19 +12,12 @@ import java.util.Scanner;
 
 public class Player {
 
-    /**
-     * Input scanner for all user's inputs
-     */
-    private static Scanner sc = new Scanner(System.in);
+    private java.lang.String name;
 
-    /**
-     *
-     */
     private static int lastNumber = 0;
 
     private int id;
 
-    private java.lang.String name;
 
     public Player() {
         this.id = ++Player.lastNumber;
@@ -39,6 +32,11 @@ public class Player {
     public String getName() {
         return this.name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public static int getLastNumber() {
         return Player.lastNumber;
     }
