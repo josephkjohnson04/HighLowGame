@@ -12,10 +12,21 @@ import java.util.Scanner;
 
 public class Player {
 
+    /**
+     * The player's name
+     */
     private java.lang.String name;
 
+
+    /**
+     * Class field that is shared across all player objects that tracks the last unique player id used. It is increased
+     * by one and assigned as the player's unique id by the default constructor.
+     */
     private static int lastNumber = 0;
 
+    /**
+     * Player's unique id that is automatically assigned by rhe default constructor.
+     */
     private int id;
 
 
@@ -48,3 +59,4 @@ public class Player {
     private int wins;
 
 }
+
