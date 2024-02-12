@@ -112,5 +112,30 @@ public class Player {
         }
     }
 
+    /**
+     * gets lowest attempts
+     * @return lowest attempts
+     */
+    public int getlowestAttempts(){
+        return lowestAttempts;
+    }
+
+    /**
+     * gets highest attempts
+     * @return lowest attempts
+     */
+    public int gethighestAttempts(){
+        return highestAttempts;
+    }
+
+    /**
+     * gets player id
+     * @return player id
+     */
+    public int getid(){
+        return id;
+    }
+
+
 }
 
