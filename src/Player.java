@@ -26,17 +26,17 @@ public class Player {
     /**
      * Player's unique id that is automatically assigned by the default constructor.
      */
-    private int id = 0;
+    private int Id = 0;
 
     /**
      * The player's highest attempt to guess the correct number across all rounds
      */
-    private int highestAttempts = 0;
+    private int HighestAttempts = 0;
 
     /**
      * The player's lowest attempt to guess the correct number across all rounds
      */
-    private int lowestAttempts = 0;
+    private int LowestAttempts = 0;
 
     /**
      * The player's total wins across all games played
@@ -48,7 +48,7 @@ public class Player {
      * by one
      */
     public Player() {
-        this.id = ++Player.lastNumber;
+        this.Id = ++Player.lastNumber;
         this.name = "Unknown";
     }
 
@@ -93,7 +93,7 @@ public class Player {
     /**
      * increments the player's number of wins
      */
-    public void addWins() {
+    public void addWin() {
         wins++;
     }
 
@@ -103,12 +103,12 @@ public class Player {
      * @param
      */
     public void setAttempts(int attempts) {
-        if (attempts > highestAttempts) {
-            highestAttempts = attempts;
+        if (attempts > HighestAttempts) {
+            HighestAttempts = attempts;
         }
 
-         if (attempts < lowestAttempts  || attempts == 0){
-            lowestAttempts = attempts;
+         if (attempts < LowestAttempts  || attempts == 0){
+            LowestAttempts = attempts;
         }
     }
 
@@ -116,24 +116,24 @@ public class Player {
      * gets lowest attempts
      * @return lowest attempts
      */
-    public int getlowestAttempts(){
-        return lowestAttempts;
+    public int getLowestAttempts(){
+        return LowestAttempts;
     }
 
     /**
      * gets highest attempts
      * @return lowest attempts
      */
-    public int gethighestAttempts(){
-        return highestAttempts;
+    public int getHighestAttempts(){
+        return HighestAttempts;
     }
 
     /**
      * gets player id
      * @return player id
      */
-    public int getid(){
-        return id;
+    public int getId(){
+        return Id;
     }
 
 
