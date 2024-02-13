@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * @author Joe Johnson and Jaylen Kile
  * @version 1.0
@@ -15,41 +13,52 @@ public class Player {
     /**
      * The player's name
      */
-    private java.lang.String name = "?";
+    private String name;
 
     /**
      * Class field that is shared across all player objects that tracks the last unique player id used. It is
      * increased by one and assigned as the player's unique id by the default constructor.
      */
-    private static int lastNumber = 0;
+    private static int lastNumber;
 
     /**
      * Player's unique id that is automatically assigned by the default constructor.
      */
-    private int Id = 0;
+    private int id;
 
     /**
      * The player's highest attempt to guess the correct number across all rounds
      */
-    private int HighestAttempts = 0;
+    private int highestAttempts;
 
     /**
      * The player's lowest attempt to guess the correct number across all rounds
      */
-    private int LowestAttempts = 0;
+    private int lowestAttempts;
 
     /**
      * The player's total wins across all games played
      */
-    private int wins = 0;
+    private int wins;
 
     /**
-     * Creates a new player with a unique id, sets their name to unknown, and increments the class field lastNumber
-     * by one
+     * Default constructor that creates a new player. The field lastNumber is incremented by one and unique ids are
+     * assigned. Integers are set to zero and the name is set to Unknown.
      */
     public Player() {
-        this.Id = ++Player.lastNumber;
+        this.id = ++Player.lastNumber;
         this.name = "Unknown";
+        this.wins = 0;
+        this.highestAttempts = 0;
+        this.lowestAttempts = 0;
+    }
+
+    /**
+     *  Sets name
+     * @param The player's name
+     */
+    public void setName (String name) {
+        this.name = name;
     }
 
     /**
@@ -103,12 +112,12 @@ public class Player {
      * @param
      */
     public void setAttempts(int attempts) {
-        if (attempts > HighestAttempts) {
-            HighestAttempts = attempts;
+        if (attempts > highestAttempts) {
+            highestAttempts = attempts;
         }
 
-         if (attempts < LowestAttempts  || attempts == 0){
-            LowestAttempts = attempts;
+         if (attempts < lowestAttempts  || attempts == 0){
+            lowestAttempts = attempts;
         }
     }
 
@@ -117,7 +126,7 @@ public class Player {
      * @return lowest attempts
      */
     public int getLowestAttempts(){
-        return LowestAttempts;
+        return lowestAttempts;
     }
 
     /**
@@ -125,7 +134,7 @@ public class Player {
      * @return lowest attempts
      */
     public int getHighestAttempts(){
-        return HighestAttempts;
+        return highestAttempts;
     }
 
     /**
@@ -133,9 +142,8 @@ public class Player {
      * @return player id
      */
     public int getId(){
-        return Id;
+        return id;
     }
-
 
 }
 
