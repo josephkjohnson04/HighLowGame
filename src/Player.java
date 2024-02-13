@@ -79,14 +79,6 @@ public class Player {
     }
 
     /**
-     * Sets the player's name unless empty and removes trailing spaces
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
      * Gets the players last number
      * @return the last number
      */
