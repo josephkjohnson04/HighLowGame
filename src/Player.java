@@ -86,38 +86,40 @@ public class Player {
         this.name = name;
     }
 
+    /**
+     * Gets the players last number
+     * @return the last number
+     */
     public static int getLastNumber() {
         return Player.lastNumber;
     }
-
 
     /**
      * Gets number of wins
      * @return number of wins
      */
     public int getWins() {
-        return wins;
+        return this.wins;
     }
 
     /**
      * increments the player's number of wins
      */
     public void addWin() {
-        wins++;
+        this.wins++;
     }
-
 
     /**
      * Sets the player's highest and lowest attempts
      * @param
      */
     public void setAttempts(int attempts) {
-        if (attempts > highestAttempts) {
-            highestAttempts = attempts;
+        if (attempts > this.highestAttempts) {
+            this.highestAttempts = attempts;
         }
 
-         if (attempts < lowestAttempts  || attempts == 0){
-            lowestAttempts = attempts;
+         if (attempts < this.lowestAttempts || this.lowestAttempts == 0){
+             this.lowestAttempts = attempts;
         }
     }
 
@@ -126,7 +128,7 @@ public class Player {
      * @return lowest attempts
      */
     public int getLowestAttempts(){
-        return lowestAttempts;
+        return this.lowestAttempts;
     }
 
     /**
@@ -134,7 +136,7 @@ public class Player {
      * @return lowest attempts
      */
     public int getHighestAttempts(){
-        return highestAttempts;
+        return this.highestAttempts;
     }
 
     /**
@@ -142,7 +144,7 @@ public class Player {
      * @return player id
      */
     public int getId(){
-        return id;
+        return this.id;
     }
 
 }
