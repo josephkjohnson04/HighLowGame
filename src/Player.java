@@ -19,7 +19,7 @@ public class Player {
      * Class field that is shared across all player objects that tracks the last unique player id used. It is
      * increased by one and assigned as the player's unique id by the default constructor.
      */
-    private static int lastNumber;
+    private static int lastNumber = 0;
 
     /**
      * Player's unique id that is automatically assigned by the default constructor.
