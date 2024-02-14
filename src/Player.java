@@ -11,7 +11,7 @@
 public class Player {
 
     /**
-     * The player's name
+     * The player's name.
      */
     private String name;
 
@@ -27,17 +27,17 @@ public class Player {
     private int id;
 
     /**
-     * The player's highest attempt to guess the correct number across all rounds
+     * The player's highest attempt to guess the correct number across all rounds.
      */
     private int highestAttempts;
 
     /**
-     * The player's lowest attempt to guess the correct number across all rounds
+     * The player's lowest attempt to guess the correct number across all rounds.
      */
     private int lowestAttempts;
 
     /**
-     * The player's total wins across all games played
+     * The player's total wins across all games played.
      */
     private int wins;
 
@@ -54,16 +54,21 @@ public class Player {
     }
 
     /**
-     *  Sets name
-     * @param The player's name
+     *  Sets the name of the player and throws error if it is invalid.
+     * @param The players name.
+     * @throws Name can not be empty.
+     *
      */
     public void setName (String name) {
-        this.name = name;
+        if (name == "")
+            System.out.println("Invalid name! Name can't be blank");
+        else
+            this.name = name;
     }
 
     /**
-     * Overload constructor creates a new player and calls the default constructor, then sets name
-     * @param name
+     * Overload constructor creates a new player and calls the default constructor, then sets name.
+     * @param the players name.
      */
     public Player(String name) {
         this();
@@ -71,31 +76,31 @@ public class Player {
     }
 
     /**
-     * Gets player's name
-     * @return player's name
+     * Gets the player's name.
+     * @return The player's name.
      */
     public String getName() {
         return this.name;
     }
 
     /**
-     * Gets the players last number
-     * @return the last number
+     * Gets the players last number.
+     * @return The last number.
      */
     public static int getLastNumber() {
         return Player.lastNumber;
     }
 
     /**
-     * Gets number of wins
-     * @return number of wins
+     * Gets the number of wins.
+     * @return The number of wins.
      */
     public int getWins() {
         return this.wins;
     }
 
     /**
-     * increments the player's number of wins
+     * Increments the player's number of wins.
      */
     public void addWin() {
         this.wins++;
@@ -103,7 +108,7 @@ public class Player {
 
     /**
      * Sets the player's highest and lowest attempts
-     * @param
+     * @param The players highest and lowest attempts.
      */
     public void setAttempts(int attempts) {
         if (attempts > this.highestAttempts) {
@@ -116,24 +121,24 @@ public class Player {
     }
 
     /**
-     * gets lowest attempts
-     * @return lowest attempts
+     * Gets the players lowest attempts.
+     * @return The players lowest attempts.
      */
     public int getLowestAttempts(){
         return this.lowestAttempts;
     }
 
     /**
-     * gets highest attempts
-     * @return lowest attempts
+     * Gets highest attempts of the player.
+     * @return The players highest attempts.
      */
     public int getHighestAttempts(){
         return this.highestAttempts;
     }
 
     /**
-     * gets player id
-     * @return player id
+     * Gets the players id.
+     * @return The player id.
      */
     public int getId(){
         return this.id;
