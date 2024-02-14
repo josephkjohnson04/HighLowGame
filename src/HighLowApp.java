@@ -237,7 +237,8 @@ public class HighLowApp {
 			// at the start of each round, generate a new random number
 		    HighLowApp.correctAnswer = random.nextInt(100) + 1; // generate a number between 1 & 100 inclusively
 		    
-
+		    System.out.println("****ONLY for Testing: " + HighLowApp.correctAnswer + " ****");
+		    System.out.println();
 		    
 		    correct = false; // at the start of each round reset correct answer to false used to keep looping
 		    
